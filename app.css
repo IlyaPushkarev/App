@@ -1,4 +1,41 @@
+:root{
+	--main-accent: #fc575e;
+	--light-accent-color: #f0f1f5;
+	--dark-accent-color: #333;
+	--main-grey: #555;
+}
+
 *{
 	margin: 0;
 	padding: 0;
+	font-family: Arial;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: var(--light-accent-color);
+}
+
+a{
+	text-decoration: none;
+}
+
+a:hover{
+	cursor: pointer;
+}
+
+.container{
+	width: 80%;
+	margin: 0 auto;
+}
+
+/* Navbar */
+nav{
+	height: 60px;
+	background-color: var(--dark-accent-color);
+	margin-bottom: 25px;
+}
+
+#navContainer{
+	display: flex;
 }
