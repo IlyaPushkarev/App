@@ -17,12 +17,69 @@
 
 	<div class="container">
 		
-		<div class="panel" id="addLinkPannel">
-			
+		<div class="panel hidden" id="addLinkPannel">
+			<h3 class="header">Add Link</h3>
+			<form action="" id="addLinkForm">
+				<input type="text" class="form-control" id="linkTitle" name="title" placeholder="Title">
+				<input type="text" class="form-control" id="linkUrl" name="url" placeholder="URL">
+				<input type="text" class="form-control" id="linkCategory" name="category" placeholder="Categories (comma seprated)">
+
+				<div id="addedCategories">
+					
+				</div>
+
+				<input type="submit" id="submitButton" value="Submit">
+				<input type="submit" id="cancelButton" value="Cancel">
+
+			</form>
 		</div>
 
 		<div id="linksList">
-			
+			<div class="link panel">
+				<div class="link-options">
+					<button class="btn-sm">Delete</button>
+					<button class="btn-sm">Edit</button>
+				</div>
+
+				<a href="#"><h1 class="header">LinkTitle</h1></a>
+				<p class="link-date">12/25/2017</p>
+
+				<div class="categories">
+					Categories:
+					<span class="category">Web Development</span>
+					<span class="category">Javascript</span>
+				</div>
+			</div>
+			<div class="link panel">
+				<div class="link-options">
+					<button class="btn-sm">Delete</button>
+					<button class="btn-sm">Edit</button>
+				</div>
+
+				<a href="#"><h1 class="header">LinkTitle</h1></a>
+				<p class="link-date">12/25/2017</p>
+
+				<div class="categories">
+					Categories:
+					<span class="category">Web Development</span>
+					<span class="category">Javascript</span>
+				</div>
+			</div>
+			<div class="link panel">
+				<div class="link-options">
+					<button class="btn-sm">Delete</button>
+					<button class="btn-sm">Edit</button>
+				</div>
+
+				<a href="#"><h1 class="header">LinkTitle</h1></a>
+				<p class="link-date">12/25/2017</p>
+
+				<div class="categories">
+					Categories:
+					<span class="category">Web Development</span>
+					<span class="category">Javascript</span>
+				</div>
+			</div>
 		</div>
 	</div>
 

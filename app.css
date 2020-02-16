@@ -18,6 +18,7 @@ body{
 
 a{
 	text-decoration: none;
+	color: black;
 }
 
 a:hover{
@@ -29,6 +30,15 @@ a:hover{
 	margin: 0 auto;
 }
 
+.hidden{
+	display: none;
+}
+
+.header{
+	font-size: 24px;
+	margin-bottom: 10px;
+	color: var(--main-grey);
+}
 /* Navbar */
 nav{
 	height: 60px;
@@ -39,4 +49,92 @@ nav{
 #navContainer{
 	display: flex;
 	flex-direction: row;
+	height: 100%;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav-header{
+	color: var(--light-accent-color);
+	font-size: 28px;
+}
+
+#addBtn{
+	font-size: 24px;
+	color: var(--light-accent-color);
+}
+
+/* Panel */
+.panel{
+	background: white;
+	border-radius: 5px;
+	box-shadow: 0 0 3px var(--main-grey);
+	padding: 40px 20px 20px 20px;
+	margin: 10px;
+}
+
+/* Form */
+.form-control{
+	width: 100%;
+	margin: 8px 0;
+	height: 34px;
+	border-radius: 5px;
+	border: 1px solid var(--main-grey);
+	padding: 5px 15px;
+	font-size: 14px;
+	color: var(--main-grey);
+	outline: none;
+}
+
+/* Buttons */
+input[type="submit"],
+button{
+	padding: 8px 22px;
+	border-radius: 5px;
+	border: 1px solid var(--main-accent);
+	background-color: var(--main-accent);
+	color: var(--light-accent-color);
+	font-size: 16px;
+	outline: none;
+}
+
+input[type="submit"]:hover,
+button:hover{
+	cursor: pointer;
+	color: var(--main-accent);
+	background-color: white;
+}
+
+.btn-sm{
+	font-size: 10px;
+	padding: 5px 10px;
+}
+/*Link*/
+.link{
+	position: relative;
+}
+
+.link-options{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+.link-date{
+	font-size: 14px;
+	font-style: italic;
+}
+
+#addedCategories{
+	margin-bottom: 10px;
+}
+.category{
+	font-weight: bold;
+	padding: 5px;
+	margin: 5px 2px;
+	border: 1px solid var(--main-accent);
+	border-radius: 5px;
+	font-size: 10px;
+	background-color: var(--main-accent);
+	color: var(--light-accent-color);
 }
