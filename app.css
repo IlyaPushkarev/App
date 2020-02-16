@@ -38,4 +38,5 @@ nav{
 
 #navContainer{
 	display: flex;
+	flex-direction: row;
 }
