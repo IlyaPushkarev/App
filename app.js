@@ -5,24 +5,27 @@ const cancelBtn = document.getElementById('cancelButton');
 const addLinkPanel = document.getElementById('addLinkPannel');
 const addedCategories = document.getElementById('addedCategories');
 const linksList = document.getElementById('linksList');
-
+const addLinkContainer = document.getElementById('addLinkContainer')
 let editIndex = -1;
 let linkCategories = [];
 let links = [
 	{
 		title: "New Link 1",
 		url: "url.con1",
-		categories: ['node', 'angular']
+		categories: ['node', 'angular'],
+		date: new Date()
 	},
 	{
 		title: "New Link 2",
 		url: "url.con2",
-		categories: ['js', 'angular']
+		categories: ['js', 'angular'],
+		date: new Date()
 	},
 	{
 		title: "New Link 3",
 		url: "url.con3",
-		categories: ['node', 'bootstrap']
+		categories: ['node', 'bootstrap'],
+		date: new Date()
 	}
 ];
 
@@ -42,6 +45,7 @@ cancelBtn.addEventListener("click", (event) =>{
 
 function showFormPanel () {
 
+	addLinkContainer.classList.remove("hidden");
 	addLinkPanel.classList.remove("hidden");
 
 	displayLinkCategories();
@@ -49,6 +53,7 @@ function showFormPanel () {
 
 function hideFormPanel () {
 
+	addLinkContainer.classList.add("hidden");
 	addLinkPanel.classList.add("hidden");
 	clearLinkForm ()
 }
@@ -97,7 +102,8 @@ submitButton.addEventListener("click", (event) => {
 	const newLink = {
 		title,
 		url,
-		categories
+		categories,
+		date: new Date()
 	}
 
 	if(editIndex === -1){
@@ -130,7 +136,7 @@ function displayLinks () {
 					</div>
 
 					<a href="${link.url}"><h1 class="header">${link.title}</h1></a>
-					<p class="link-date">${Date.now()}</p>
+					<p class="link-date">${formatDate(link.date)}</p>
 
 					<div class="categories">
 						Categories:`;
@@ -167,4 +173,9 @@ function editLink (index) {
 
 	showFormPanel();
 
+}
+
+function formatDate (date) {
+	console.log(date)
+	return `${("0" + date.getDate()).slice(-2)}/${("0" + (date.getMonth() + 1)).slice(-2)}/${date.getFullYear()}`
 }

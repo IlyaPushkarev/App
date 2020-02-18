@@ -13,6 +13,8 @@
 }
 
 body{
+	/* height: 100vh;
+	position: relative; */
 	background-color: var(--light-accent-color);
 }
 
@@ -39,6 +41,16 @@ a:hover{
 	margin-bottom: 10px;
 	color: var(--main-grey);
 }
+
+.full-screen-opaque{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.7);
+	z-index: 5;
+}
 /* Navbar */
 nav{
 	height: 60px;
@@ -57,11 +69,24 @@ nav{
 .nav-header{
 	color: var(--light-accent-color);
 	font-size: 28px;
+	transition: all 0.25s;
+}
+
+.nav-header:hover{
+	color: var(--main-accent);
+	letter-spacing: 8px;
+	transform: scale(1.05);
+	cursor: pointer;
 }
 
 #addBtn{
 	font-size: 24px;
 	color: var(--light-accent-color);
+	transition: transform 0.25s 0s;
+}
+
+#addBtn:hover{
+	transform: scale(1.2);
 }
 
 @media only screen and (max-width: 786px){
@@ -96,6 +121,20 @@ nav{
 	outline: none;
 }
 
+#addLinkContainer{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	animation: slide-down 1s 0s ease-in ;
+}
+
+#addLinkContainer.hidden{
+	display: none;
+}
+
+#addLinkPannel{
+	animation: slide-down 1s 0s ease-in ;
+}
 /* Buttons */
 input[type="submit"],
 button{
@@ -106,6 +145,7 @@ button{
 	color: var(--light-accent-color);
 	font-size: 16px;
 	outline: none;
+	transition: all 0.25s;
 }
 
 input[type="submit"]:hover,
@@ -124,6 +164,9 @@ button:hover{
 	position: relative;
 }
 
+.link:hover{
+	box-shadow: 0 0 3px var(--main-accent);
+}
 #linksList{
 	display: flex;
 	flex-wrap: wrap;
