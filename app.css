@@ -64,6 +64,16 @@ nav{
 	color: var(--light-accent-color);
 }
 
+@media only screen and (max-width: 786px){
+	nav{
+		height: 100px;
+	}
+
+	#navContainer{
+		flex-direction: column;
+		justify-content: center;
+	}
+}
 /* Panel */
 .panel{
 	background: white;
@@ -114,6 +124,14 @@ button:hover{
 	position: relative;
 }
 
+#linksList{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.flex-item{
+	flex-basis: 100%;
+}
 .link-options{
 	position: absolute;
 	top: 5px;
@@ -137,4 +155,16 @@ button:hover{
 	font-size: 10px;
 	background-color: var(--main-accent);
 	color: var(--light-accent-color);
+}
+
+@media only screen and (min-width:786px){
+	.flex-item{
+		flex-basis: 50%;
+	}
+}
+
+@media only screen and (min-width:1280px){
+	.flex-item{
+		flex-basis: 33%;
+	}
 }
